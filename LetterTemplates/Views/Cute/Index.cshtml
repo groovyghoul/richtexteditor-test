@@ -1,0 +1,13 @@
+﻿@model LetterTemplates.ViewModels.Letter
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("SaveToPdf", "Cute", FormMethod.Post))
+{ 
+    @Html.Raw(ViewBag.Editor)
+    <button class="btn btn-primary" type="submit">Save to Pdf</button>
+}
